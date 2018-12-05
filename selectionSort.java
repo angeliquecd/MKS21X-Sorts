@@ -8,7 +8,7 @@ public static void selectionSort(int [] ary) {
         shortestindex=index;//excludes past values
         old=ary[index];
   for (int i=0;i+index<ary.length;i++){
-    if (ary[index+i]<shortest) {//finds shortest part of ary
+    if (ary[index+i]<=shortest) {//finds shortest part of ary
     shortest=ary[i+index];//saves what it is
     shortestindex=index+i;}//bookmarks its location
   }
