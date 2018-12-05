@@ -14,7 +14,7 @@ public static void selectionSort(int [] ary) {
   }
   ary[index]=shortest;//performs a swap:
   ary[shortestindex]=old;
-  //System.out.println(printArray(ary))
+  //System.out.println(printArray(ary));
   }
 }
   public static String printArray(int[] ary) {
@@ -120,7 +120,14 @@ public static void selectionSort(int [] ary) {
       } else {
         System.out.println("TEST CASE - FAIL");
       }
-
+//In class testing
+	System.out.println("In class testing: ");
+	int[] test_class= {7,5,4,2};
+	selectionSort(test_class);
+	System.out.println(printArray(test_class));
+	int[] test2_class={5,1,12,-5,16,2,12,14};
+	selectionSort(test2_class);
+	System.out.println(printArray(test2_class));
     }
 
 }
