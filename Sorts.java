@@ -27,13 +27,13 @@ public class Sorts{
   *@param data  the elements to be sorted.
   */
   public static void bubbleSort(int[] ary){
-    if (ary.length>0){
+    if (ary.length>0){//acounts for size zero
     double swaps=10.6;
     int index=-1;
     int oldfirst;
     int oldsecond;
-    while (swaps!=0){
-      swaps=0;
+    while (swaps!=0){//ends when no swaps are done
+      swaps=0;//restarts each time
       for (int i =0;i<ary.length-1;i++){
         if (ary[i]>ary[i+1]){
           if (swaps==10.6) swaps=1;//adds to swap number
@@ -153,7 +153,7 @@ public class Sorts{
       } else {
         System.out.println("TEST CASE - FAIL");
       }
-  //In class testing
+  //In class testing selectionSort
   System.out.println("In class testing: ");
   int[] test_class= {7,5,4,2};
   selectionSort(test_class);
