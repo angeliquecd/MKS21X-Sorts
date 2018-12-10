@@ -164,6 +164,9 @@ public class Sorts{
   int [] test_emptya={};
   selectionSort(test_emptya);
   System.out.println(printArray(test_emptya));
+  int [] ordereda = {1,2,3,4,5,6,7,10,15};
+selectionSort(ordereda);
+System.out.println(printArray(ordereda));
 
   System.out.println();
   System.out.println("Testing bubbleSort: ");
@@ -179,6 +182,8 @@ public class Sorts{
   int[] test_cbubble = { 17, 1, 19, 2, 18, 20, 1, 18, 11, 13, 5, 17 };
   bubbleSort(test_cbubble);
   System.out.println(printArray(test_cbubble));
+  bubbleSort(ordereda);
+  System.out.println(printArray(ordereda));
     }
 
 }
