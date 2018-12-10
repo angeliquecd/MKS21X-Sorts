@@ -48,6 +48,17 @@ public class Sorts{
     }
   }
   }
+public static void insertionSort(int[] ary){
+    for (int i=1;i<ary.length;i++){
+      while (j<i){
+      if (ary[i]<ary[j]){
+        oldj=ary[j];
+        ary[j]=ary[i];
+      }
+      j++;
+    }
+  }
+}
   public static String printArray(int[] ary) {
       String output = "[";
       if (ary.length>0){
