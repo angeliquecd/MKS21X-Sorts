@@ -49,9 +49,9 @@ public class Sorts{
   }
   }
 public static void insertionSort(int[] ary){
-    for (int i=1;i<ary.length;i++){
+    for (int i=1;i<ary.length;i++){//starts it at first bc list of one is sorted
       while (j<i){
-      if (ary[i]<ary[j]){
+      if (ary[i]<ary[j]){//starts the shift here
         oldj=ary[j];
         ary[j]=ary[i];
       }
