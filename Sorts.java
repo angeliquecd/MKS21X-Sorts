@@ -57,20 +57,20 @@ public static void insertionSort(int[] ary){
     int stored1=0;
     boolean shiftedalready= false;
       current=ary[i];
-      System.out.println();
-      System.out.println(""+current);
-      System.out.println(printArray(ary));
+  //    System.out.println();
+    //  System.out.println(""+current);
+  //    System.out.println(printArray(ary));
     for (int b =0;b<i+1;b++){
-      System.out.println(""+b);
+    //  System.out.println(""+b);
       if (current<ary[b]){
-        shifting = true;}
+        shifting = true;} //finds correct place to start shifting
       if (shifting){
-        if (!shiftedalready) stored=current;
-        stored1=ary[b];
-        ary[b]=stored;
-        stored=stored1;
+        if (!shiftedalready) stored=current;//starts off the shift
+        stored1=ary[b];//stores value there
+        ary[b]=stored;//gives in past stored value
+        stored=stored1;//stores new value as stored value to pass on
         shiftedalready=true;}
-          System.out.println("second"+printArray(ary));
+      //    System.out.println("second"+printArray(ary));
     //  System.out.println("third "+printArray(ary));
   }
 }
@@ -218,6 +218,9 @@ System.out.println(printArray(ordereda));
   System.out.println(printArray(test_cinsertion));
   insertionSort(ordereda);
   System.out.println(printArray(ordereda));
+  int [] test_binsertion= {1,4,3,7,6,5,2,8,9,10};
+  insertionSort(test_binsertion);
+  System.out.println(printArray(test_binsertion));
     }
 
 }
