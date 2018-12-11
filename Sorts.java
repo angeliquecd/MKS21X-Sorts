@@ -49,15 +49,31 @@ public class Sorts{
   }
   }
 public static void insertionSort(int[] ary){
-    for (int i=1;i<ary.length;i++){//starts it at first bc list of one is sorted
-      while (j<i){
-      if (ary[i]<ary[j]){//starts the shift here
-        oldj=ary[j];
-        ary[j]=ary[i];
-      }
-      j++;
-    }
+  int current=0;
+  boolean shifting= false;
+  for (int i=0;i<ary.length;i++){
+    shifting=false;
+    int stored=0;
+    int stored1=0;
+    boolean shiftedalready= false;
+      current=ary[i];
+      System.out.println();
+      System.out.println(""+current);
+      System.out.println(printArray(ary));
+    for (int b =0;b<i+1;b++){
+      System.out.println(""+b);
+      if (current<ary[b]){
+        shifting = true;}
+      if (shifting){
+        if (!shiftedalready) stored=current;
+        stored1=ary[b];
+        ary[b]=stored;
+        stored=stored1;
+        shiftedalready=true;}
+          System.out.println("second"+printArray(ary));
+    //  System.out.println("third "+printArray(ary));
   }
+}
 }
   public static String printArray(int[] ary) {
       String output = "[";
@@ -175,6 +191,9 @@ public static void insertionSort(int[] ary){
   int [] test_emptya={};
   selectionSort(test_emptya);
   System.out.println(printArray(test_emptya));
+  int [] ordereda = {1,2,3,4,5,6,7,10,15};
+selectionSort(ordereda);
+System.out.println(printArray(ordereda));
 
   System.out.println();
   System.out.println("Testing bubbleSort: ");
@@ -190,6 +209,15 @@ public static void insertionSort(int[] ary){
   int[] test_cbubble = { 17, 1, 19, 2, 18, 20, 1, 18, 11, 13, 5, 17 };
   bubbleSort(test_cbubble);
   System.out.println(printArray(test_cbubble));
+  bubbleSort(ordereda);
+  System.out.println(printArray(ordereda));
+  System.out.println();
+  System.out.println("Testing insertion sort: ");
+  int[] test_cinsertion = { 17, 1, 19, 2, 18, 20, 1, 18, 11, 13, 5, 17 };
+  insertionSort(test_cinsertion);
+  System.out.println(printArray(test_cinsertion));
+  insertionSort(ordereda);
+  System.out.println(printArray(ordereda));
     }
 
 }
