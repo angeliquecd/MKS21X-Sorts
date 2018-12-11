@@ -49,15 +49,23 @@ public class Sorts{
   }
   }
 public static void insertionSort(int[] ary){
-    for (int i=1;i<ary.length;i++){
-      while (j<i){
-      if (ary[i]<ary[j]){
-        oldj=ary[j];
-        ary[j]=ary[i];
-      }
-      j++;
-    }
+  int older=0;
+  int current=0;
+  for (int i=0;i<ary.length;i++){
+      current=ary[i];
+        System.out.println(printArray(ary));
+    for (int b =0;b<i;b++){
+      if (current<ary[b]){//perform swap
+        older=ary[b];
+        ary[b]=current;
+        ary[b+1]=older;
+          System.out.println("second"+printArray(ary));
+        for (int r=b+2;r<i+1;r++){
+      ary[r]=ary[r-1];}
+      System.out.println("third "+printArray(ary));
   }
+}
+}
 }
   public static String printArray(int[] ary) {
       String output = "[";
@@ -194,6 +202,13 @@ System.out.println(printArray(ordereda));
   bubbleSort(test_cbubble);
   System.out.println(printArray(test_cbubble));
   bubbleSort(ordereda);
+  System.out.println(printArray(ordereda));
+  System.out.println();
+  System.out.println("Testing insertion sort: ");
+  int[] test_cinsertion = { 17, 1, 19, 2, 18, 20, 1, 18, 11, 13, 5, 17 };
+  insertionSort(test_cinsertion);
+  System.out.println(printArray(test_cinsertion));
+  insertionSort(ordereda);
   System.out.println(printArray(ordereda));
     }
 
