@@ -7,6 +7,10 @@ public class Driver{
     for(int i = 0 ; i < randish.length; i++){
       randish[i] =(int)(Math.random()*10000);
     }
+    int[] zeros= new int[1000000];
+    for (int i=0;i<zeros.length;i++){
+      zeros[i]=0;
+    }
 
     if(artie[1].equals("selection")){
       Sorts.selectionSort(randish);
@@ -34,6 +38,9 @@ public class Driver{
       if (Arrays.equals(randish4,randish3)){
         System.out.println("Insertion Correct!");
       }
+    }
+    if (artie[1].equals("zeros")){
+      Sorts.bubbleSort(zeros);
     }
   }
 }
