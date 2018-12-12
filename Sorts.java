@@ -63,7 +63,6 @@ public static void insertionSort(int[] ary){
         stored1=ary[b];//stores value there
         ary[b]=stored;//gives in past stored value
         stored=stored1;}//stores new value as stored value to pass on
-    //  System.out.println("third "+printArray(ary));
   }
 }}
 }
