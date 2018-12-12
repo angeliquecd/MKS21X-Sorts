@@ -49,31 +49,23 @@ public class Sorts{
   }
   }
 public static void insertionSort(int[] ary){
-  int current=0;
-  boolean shifting= false;
+  if (ary.length>0){
+  boolean shifting;
+  int stored1;
+  int stored;
   for (int i=0;i<ary.length;i++){
     shifting=false;
-    int stored=0;
-    int stored1=0;
-    boolean shiftedalready= false;
-      current=ary[i];
-  //    System.out.println();
-    //  System.out.println(""+current);
-  //    System.out.println(printArray(ary));
-    for (int b =0;b<i+1;b++){
-    //  System.out.println(""+b);
-      if (current<ary[b]){
+    stored=ary[i];
+  for (int b =0;b<i+1;b++){
+      if (stored<ary[b]){
         shifting = true;} //finds correct place to start shifting
-      if (shifting){
-        if (!shiftedalready) stored=current;//starts off the shift
+      if (shifting){//starts off the shift
         stored1=ary[b];//stores value there
         ary[b]=stored;//gives in past stored value
-        stored=stored1;//stores new value as stored value to pass on
-        shiftedalready=true;}
-      //    System.out.println("second"+printArray(ary));
+        stored=stored1;}//stores new value as stored value to pass on
     //  System.out.println("third "+printArray(ary));
   }
-}
+}}
 }
   public static String printArray(int[] ary) {
       String output = "[";
